@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Content View Controller-->
+        <scene sceneID="UyX-3a-4zF">
+            <objects>
+                <collectionViewController storyboardIdentifier="ContentViewController" id="x0j-vE-fWx" customClass="ContentViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="swe-bt-nfe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="VkF-tq-E9p" customClass="CZFlowLayout">
+                            <size key="itemSize" width="141" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="yiz-Hc-uKi" customClass="CZCollectionViewCell">
+                                <rect key="frame" x="0.0" y="20" width="141" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="141" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFY-6e-kbc">
+                                            <rect key="frame" x="0.0" y="115" width="141" height="30"/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="ZGN-2Q-QwR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1z1-t0-Ltp">
+                                            <rect key="frame" x="0.0" y="0.0" width="141" height="62"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="EFY-6e-kbc" firstAttribute="leading" secondItem="yiz-Hc-uKi" secondAttribute="leading" id="9Gx-dK-5Qj"/>
+                                    <constraint firstAttribute="bottom" secondItem="EFY-6e-kbc" secondAttribute="bottom" constant="8" id="9fv-Cx-OW6"/>
+                                    <constraint firstItem="EFY-6e-kbc" firstAttribute="top" secondItem="1z1-t0-Ltp" secondAttribute="bottom" id="E24-FJ-HTT"/>
+                                    <constraint firstAttribute="trailing" secondItem="EFY-6e-kbc" secondAttribute="trailing" id="Szq-NG-xbS"/>
+                                    <constraint firstItem="1z1-t0-Ltp" firstAttribute="leading" secondItem="yiz-Hc-uKi" secondAttribute="leading" id="qsu-ud-ICh"/>
+                                    <constraint firstItem="1z1-t0-Ltp" firstAttribute="top" secondItem="yiz-Hc-uKi" secondAttribute="top" id="wbz-oh-dwD"/>
+                                    <constraint firstAttribute="trailing" secondItem="1z1-t0-Ltp" secondAttribute="trailing" id="wtF-6z-REy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="1z1-t0-Ltp" id="Dbs-YQ-1rf"/>
+                                    <outlet property="priceLabel" destination="EFY-6e-kbc" id="kGd-vU-6nS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="x0j-vE-fWx" id="RCt-DH-m7i"/>
+                            <outlet property="delegate" destination="x0j-vE-fWx" id="J4F-Ct-P8G"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="FlowLayout" destination="VkF-tq-E9p" id="dnE-AB-OUc"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dP4-FY-8hK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="369"/>
+        </scene>
+    </scenes>
+</document>
